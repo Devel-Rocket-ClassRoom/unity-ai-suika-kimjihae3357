@@ -1,0 +1,38 @@
+{
+    "asset": "9d3bf2009a5753a46b56ef19def72c4f",
+    "fileName": "019e1af5-db0c-72e7-a97a-2b4e9f362818.png",
+    "prompt": "Change the blueberry color to a much more vibrant, highly saturated bright blue-indigo. The circle body should be a vivid electric blue-purple, not dark or muted. Keep the same kawaii face, calyx on top, glossy highlight, and black outline. Just make the color much brighter and more saturated.",
+    "negativePrompt": "",
+    "model": "gpt-image-1",
+    "modelName": "GPT Image 1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "9d3bf2009a5753a46b56ef19def72c4f",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

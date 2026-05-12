@@ -1,0 +1,28 @@
+{
+    "asset": "6369dd89403d9cd419c212ba2d716da7",
+    "fileName": "019e1aeb-ecca-78c7-ad7e-3f48fa0c1916.png",
+    "prompt": "Kawaii cute pear fruit sprite for suika game. Perfectly round chubby yellow-green circle filling entire canvas. Small green leaf and tiny stem on top. Cute dot eyes and tiny smile. Glossy highlight upper-left. Thick black outline, transparent background, same style as suika game.",
+    "negativePrompt": "",
+    "model": "gpt-image-1",
+    "modelName": "GPT Image 1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 640
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

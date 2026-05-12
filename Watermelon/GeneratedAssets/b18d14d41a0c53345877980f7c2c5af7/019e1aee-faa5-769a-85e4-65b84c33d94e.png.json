@@ -1,0 +1,28 @@
+{
+    "asset": "b18d14d41a0c53345877980f7c2c5af7",
+    "fileName": "019e1aee-faa5-769a-85e4-65b84c33d94e.png",
+    "prompt": "Kawaii cute watermelon fruit sprite for suika game. Perfectly round chubby dark green circle filling entire canvas. Lighter green curved stripe lines on surface. Cute dot eyes and tiny smile. Small green leaf on top. Glossy highlight upper-left. Thick black outline, transparent background, same style as suika game.",
+    "negativePrompt": "",
+    "model": "gpt-image-1",
+    "modelName": "GPT Image 1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 640
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

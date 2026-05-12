@@ -1,0 +1,28 @@
+{
+    "asset": "5490b663ead67f045b55b0f16d4231fe",
+    "fileName": "019e1ae9-4a42-71ef-9db5-8fea66bbb95b.png",
+    "prompt": "Kawaii cute grape fruit sprite for suika game. Perfectly round chubby purple-violet circle filling entire canvas. Cute dot eyes and tiny smile. Small green leaf and tiny stem on top. Glossy highlight upper-left. Thick black outline, transparent background, same style as suika game.",
+    "negativePrompt": "",
+    "model": "gpt-image-1",
+    "modelName": "GPT Image 1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 640
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

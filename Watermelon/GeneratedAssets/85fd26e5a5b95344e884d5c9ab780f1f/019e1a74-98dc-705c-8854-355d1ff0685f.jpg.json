@@ -1,0 +1,28 @@
+{
+    "asset": "85fd26e5a5b95344e884d5c9ab780f1f",
+    "fileName": "019e1a74-98dc-705c-8854-355d1ff0685f.jpg",
+    "prompt": "a cute anime fantasy character, full body, standing pose, warrior with sword, transparent background",
+    "negativePrompt": "",
+    "model": "anime-fantasy-characters-2",
+    "modelName": "Anime Fantasy Characters 2.0",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 2048,
+        "height": 2048
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}
