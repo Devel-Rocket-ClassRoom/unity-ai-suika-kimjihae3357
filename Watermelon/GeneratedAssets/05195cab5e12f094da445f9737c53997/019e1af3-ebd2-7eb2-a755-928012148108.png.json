@@ -1,0 +1,28 @@
+{
+    "asset": "05195cab5e12f094da445f9737c53997",
+    "fileName": "019e1af3-ebd2-7eb2-a755-928012148108.png",
+    "prompt": "Kawaii cute strawberry fruit sprite for suika game. Perfectly round chubby deep hot pink circle filling entire canvas. Small yellow seed dots on surface. Cute dot eyes and tiny smile. Small green leaves on top. Glossy highlight upper-left. Thick black outline, transparent background, same kawaii style as suika game fruits.",
+    "negativePrompt": "",
+    "model": "gpt-image-1",
+    "modelName": "GPT Image 1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 640
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

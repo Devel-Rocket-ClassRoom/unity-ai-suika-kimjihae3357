@@ -1,0 +1,28 @@
+{
+    "asset": "97372a3be18c94740be6b5eabb162a26",
+    "fileName": "019e1ae4-c927-78ee-8ac9-24965d704706.png",
+    "prompt": "Kawaii cute cherry fruit sprite for a suika game clone. A perfectly round chubby red circle filling the entire canvas. The circle has a glossy highlight on the upper-left. Two tiny cute dot eyes and a small smile on the front face. Two small rounded green leaves poking out from the top center. Soft vibrant red color, flat 2D cartoon style with gentle shading, thick clean black outline, transparent background, no shadow. Same style as Japanese suika watermelon game fruits.",
+    "negativePrompt": "",
+    "model": "gpt-image-1",
+    "modelName": "GPT Image 1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 640
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

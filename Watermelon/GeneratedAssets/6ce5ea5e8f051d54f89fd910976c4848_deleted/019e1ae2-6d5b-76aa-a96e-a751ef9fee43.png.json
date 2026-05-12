@@ -1,0 +1,28 @@
+{
+    "asset": "6ce5ea5e8f051d54f89fd910976c4848",
+    "fileName": "019e1ae2-6d5b-76aa-a96e-a751ef9fee43.png",
+    "prompt": "A flat 2D game fruit sprite. A large solid dark red circle that fills the entire 256x256 canvas edge to edge. On top of the circle, two small simple green leaves poking out. Flat cartoon style, no shading, no shadow, no background, no badge, no frame. The circle IS the fruit. Transparent background. Style similar to Suika game fruits.",
+    "negativePrompt": "",
+    "model": "gpt-image-1",
+    "modelName": "GPT Image 1",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 640
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}
