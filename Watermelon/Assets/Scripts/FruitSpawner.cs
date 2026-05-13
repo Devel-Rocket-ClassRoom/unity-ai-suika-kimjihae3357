@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class FruitSpawner : MonoBehaviour
 {
@@ -12,15 +13,20 @@ public class FruitSpawner : MonoBehaviour
     public float minX = -2.4f;
     public float maxX = 2.4f;
     public float dropCooldown = 0.8f;
-    // 드롭 가능한 최대 스테이지 인덱스 (GDD 기준 1~4단계 → 인덱스 0~3)
     public int maxDropStage = 3;
+
+    [Header("Next Fruit UI")]
+    public Image nextFruitImage;
+    public TMPro.TextMeshProUGUI nextFruitLabel;
 
     private GameObject previewObj;
     private float cooldownTimer;
     private bool onCooldown;
+    private int nextStage;
 
     void Start()
     {
+        nextStage = Random.Range(0, maxDropStage + 1);
         PrepareNext();
     }
 
@@ -43,7 +49,6 @@ public class FruitSpawner : MonoBehaviour
         var mouse = Mouse.current;
         if (mouse == null) return;
 
-        // 마우스 X 좌표를 따라 미리보기 과일 이동
         Vector2 screenPos = mouse.position.ReadValue();
         Vector3 worldPos = mainCamera.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, 0f));
         float x = Mathf.Clamp(worldPos.x, minX, maxX);
@@ -56,10 +61,37 @@ public class FruitSpawner : MonoBehaviour
 
     void PrepareNext()
     {
-        int stage = Random.Range(0, maxDropStage + 1);
-        previewObj = Instantiate(gameManager.fruitPrefab, new Vector3(0f, spawnY, 0f), Quaternion.identity);
-        previewObj.GetComponent<Fruit>().Initialize(stage, gameManager.fruitData);
-        // 플레이어가 드롭하기 전까지 Kinematic 유지
+        int stage = nextStage;
+        nextStage = Random.Range(0, maxDropStage + 1);
+
+        var prefab = gameManager.fruitData.stages[stage].prefab;
+        if (prefab == null) return;
+
+        previewObj = Instantiate(prefab, new Vector3(0f, spawnY, 0f), Quaternion.identity);
+        RefreshNextFruitUI();
+    }
+
+    void RefreshNextFruitUI()
+    {
+        if (nextFruitImage == null) return;
+        var stageData = gameManager.fruitData.stages[nextStage];
+        if (stageData.prefab == null) return;
+
+        var sr = stageData.prefab.GetComponentInChildren<SpriteRenderer>();
+        if (sr != null) nextFruitImage.sprite = sr.sprite;
+
+        // 콜라이더 radius 기준으로 UI 크기 비례 조정
+        var col = stageData.prefab.GetComponent<CircleCollider2D>();
+        if (col != null)
+        {
+            // 드롭 가능한 최대 스테이지의 radius를 기준으로 최대 표시 크기 결정
+            var maxStagePrefab = gameManager.fruitData.stages[maxDropStage].prefab;
+            var maxCol = maxStagePrefab != null ? maxStagePrefab.GetComponent<CircleCollider2D>() : null;
+            float maxRadius = maxCol != null ? maxCol.radius : col.radius;
+            const float maxDisplaySize = 160f;
+            float size = (col.radius / maxRadius) * maxDisplaySize;
+            nextFruitImage.rectTransform.sizeDelta = new Vector2(size, size);
+        }
     }
 
     void Drop(float x)

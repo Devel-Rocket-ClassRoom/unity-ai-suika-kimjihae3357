@@ -14,57 +14,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FruitData
   stages:
   - fruitName: Blueberry
-    radius: 0.25
     score: 10
-    color: {r: 0.2, g: 0.1, b: 0.7, a: 1}
-    sprite: {fileID: 21300000, guid: 9d3bf2009a5753a46b56ef19def72c4f, type: 3}
+    prefab: {fileID: 1807594135004282017, guid: bfef508e6ec01994b907a12b1a33291f, type: 3}
+    particleColor: {r: 0.514151, g: 0.55169344, b: 1, a: 1}
   - fruitName: Strawberry
-    radius: 0.35
     score: 20
-    color: {r: 1, g: 0.15, b: 0.6, a: 1}
-    sprite: {fileID: 21300000, guid: 05195cab5e12f094da445f9737c53997, type: 3}
+    prefab: {fileID: 1733514882216068304, guid: ae03d5b913446c2458e275549394d45c, type: 3}
+    particleColor: {r: 1, g: 0.4669811, b: 0.4669811, a: 1}
   - fruitName: Grape
-    radius: 0.45
     score: 30
-    color: {r: 0.55, g: 0.05, b: 0.88, a: 1}
-    sprite: {fileID: 21300000, guid: 5490b663ead67f045b55b0f16d4231fe, type: 3}
+    prefab: {fileID: 1040268263138437887, guid: 0965b2cc12acb444d9ba756aea2f5f7b, type: 3}
+    particleColor: {r: 0.7504732, g: 0.45817015, b: 0.9811321, a: 1}
   - fruitName: Dekopon
-    radius: 0.55
     score: 40
-    color: {r: 1, g: 0.5, b: 0.02, a: 1}
-    sprite: {fileID: 21300000, guid: 174dc45f49a63c54990b4b2326c8580e, type: 3}
+    prefab: {fileID: 1980232239697859796, guid: 5ce515defa302ac47b3a2db181c91e16, type: 3}
+    particleColor: {r: 0.990566, g: 0.69628894, b: 0.4812656, a: 1}
   - fruitName: Persimmon
-    radius: 0.65
     score: 50
-    color: {r: 0.97, g: 0.88, b: 0.02, a: 1}
-    sprite: {fileID: 21300000, guid: 02440976d30a25e41aae080de59c2358, type: 3}
+    prefab: {fileID: 7458700594024910052, guid: 0ced4c88180db334b90f4e0abd312322, type: 3}
+    particleColor: {r: 1, g: 0.816727, b: 0.514151, a: 1}
   - fruitName: Apple
-    radius: 0.75
     score: 60
-    color: {r: 0.28, g: 0.88, b: 0.08, a: 1}
-    sprite: {fileID: 21300000, guid: 32b2a18d8a55ffe4183cb7139f6de795, type: 3}
+    prefab: {fileID: 5781077728769508950, guid: 76c2847e22ed5b54e8c8dafdb603bee0, type: 3}
+    particleColor: {r: 0.9622642, g: 0.36765754, b: 0.36765754, a: 1}
   - fruitName: Pear
-    radius: 0.9
     score: 70
-    color: {r: 0.03, g: 0.78, b: 0.65, a: 1}
-    sprite: {fileID: 21300000, guid: 6369dd89403d9cd419c212ba2d716da7, type: 3}
+    prefab: {fileID: 5028023073190980688, guid: 2f5eb10589842cd469bf515151da291d, type: 3}
+    particleColor: {r: 0.9092785, g: 0.990566, b: 0.52799034, a: 1}
   - fruitName: Peach
-    radius: 1.05
     score: 80
-    color: {r: 0.08, g: 0.62, b: 0.98, a: 1}
-    sprite: {fileID: 21300000, guid: 605c09ec124c8354f854c3d9b1d79aee, type: 3}
+    prefab: {fileID: 6475877074153067079, guid: 0316fe07b4de6a540ad5bd74483e7b40, type: 3}
+    particleColor: {r: 1, g: 0.75, b: 0.94911456, a: 1}
   - fruitName: Pineapple
-    radius: 1.25
     score: 90
-    color: {r: 0.08, g: 0.15, b: 0.88, a: 1}
-    sprite: {fileID: 21300000, guid: 7c0331d27112e314abf10a4da4223e5c, type: 3}
+    prefab: {fileID: 1934585023559519967, guid: b433e66ae5fec4a46b312c69f60a249c, type: 3}
+    particleColor: {r: 1, g: 0.886298, b: 0.4009434, a: 1}
   - fruitName: Melon
-    radius: 1.45
     score: 100
-    color: {r: 0.88, g: 0.05, b: 0.78, a: 1}
-    sprite: {fileID: 21300000, guid: 038771118ee992f40860efe0417a566b, type: 3}
+    prefab: {fileID: 2091366156101133839, guid: 5d872926acf6f994986159a07ec89175, type: 3}
+    particleColor: {r: 0.5690906, g: 0.9150943, b: 0.5050285, a: 1}
   - fruitName: Watermelon
-    radius: 1.75
     score: 200
-    color: {r: 1, g: 0.45, b: 0.35, a: 1}
-    sprite: {fileID: 21300000, guid: b18d14d41a0c53345877980f7c2c5af7, type: 3}
+    prefab: {fileID: 4170469962335936784, guid: b019c4cb7a8e67346b4b90a9d1af0363, type: 3}
+    particleColor: {r: 0.24420092, g: 0.6037736, b: 0.17942329, a: 1}

@@ -8,21 +8,21 @@ public class GameManager : MonoBehaviour
 
     [Header("Data")]
     public FruitData fruitData;
-    public GameObject fruitPrefab;
+    public GameObject mergeParticlePrefab;
 
     [Header("References")]
     public FruitSpawner spawner;
 
     [Header("Deadline")]
-    public float deadlineY = 4f;           // 데드라인의 월드 Y 좌표
-    public float gameOverGracePeriod = 3f; // 데드라인 위에 머물 수 있는 유예 시간(초)
+    public float deadlineY = 4f;
+    public float gameOverGracePeriod = 3f;
 
     [Header("UI")]
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI bestScoreText;
     public GameObject gameOverPanel;
     public TextMeshProUGUI finalScoreText;
-    public GameObject warningIndicator; // 경고 표시용 오브젝트(빨간 선 등)
+    public GameObject warningIndicator;
 
     public bool IsGameOver { get; private set; }
 
@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
         RefreshBestScoreUI();
         UpdateScoreUI();
 
-        // 에디터에서 AddListener로 추가한 이벤트는 직렬화되지 않으므로 런타임에 직접 연결
         if (gameOverPanel != null)
         {
             var btn = gameOverPanel.GetComponentInChildren<UnityEngine.UI.Button>();
@@ -81,7 +80,7 @@ public class GameManager : MonoBehaviour
         if (anyAbove)
         {
             overDeadlineTimer += Time.deltaTime;
-            if (warningIndicator) warningIndicator.SetActive(true);
+            if (warningIndicator) warningIndicator.SetActive(overDeadlineTimer >= 0.5f);
 
             if (overDeadlineTimer >= gameOverGracePeriod)
                 TriggerGameOver();
@@ -111,21 +110,42 @@ public class GameManager : MonoBehaviour
 
         if (nextStage >= fruitData.stages.Length)
         {
-            // 수박끼리 합체 시 두 과일 모두 사라지고 보너스 점수 획득
             AddScore(points + 100);
+            SpawnMergeParticle(position, stage);
             return;
         }
 
         AddScore(points);
+        SpawnMergeParticle(position, stage);
         SpawnMergedFruit(nextStage, position);
+    }
+
+    void SpawnMergeParticle(Vector2 pos, int stage)
+    {
+        if (mergeParticlePrefab == null) return;
+        var go = Instantiate(mergeParticlePrefab, pos, Quaternion.identity);
+
+        if (stage < fruitData.stages.Length)
+        {
+            var ps = go.GetComponent<ParticleSystem>();
+            if (ps != null)
+            {
+                Color base_ = fruitData.stages[stage].particleColor;
+                Color.RGBToHSV(base_, out float h, out float s, out float v);
+                Color bright = Color.HSVToRGB(h, Mathf.Max(0f, s - 0.15f), Mathf.Min(1f, v + 0.2f));
+                Color dark   = Color.HSVToRGB(h, Mathf.Min(1f, s + 0.1f),  Mathf.Max(0f, v - 0.1f));
+                var main = ps.main;
+                main.startColor = new ParticleSystem.MinMaxGradient(bright, dark);
+            }
+        }
     }
 
     void SpawnMergedFruit(int stage, Vector2 pos)
     {
-        GameObject go = Instantiate(fruitPrefab, pos, Quaternion.identity);
-        Fruit f = go.GetComponent<Fruit>();
-        f.Initialize(stage, fruitData);
-        f.Drop(); // 머지로 생성된 과일은 즉시 낙하
+        var prefab = fruitData.stages[stage].prefab;
+        if (prefab == null) return;
+        var go = Instantiate(prefab, pos, Quaternion.identity);
+        go.GetComponent<Fruit>().Drop();
     }
 
     // ── 점수 ─────────────────────────────────────────────────────────────────
